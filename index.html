@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <title>Jogo da memória</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Jogo da memória</h2>
+        <div>
+            <p>Escolha um tema:</p>
+            <div id="emojiForm">
+                <input type="radio" name="emojis" id="numeros" value="5️⃣">
+                <label for="numeros">5️⃣ Numeros</label>
+
+                <input type="radio" name="emojis" id="caretas" value="😀">
+                <label for="caretas">😀 Caretas</label>
+
+                <input type="radio" name="emojis" id="animais" value="🐶" checked>
+                <label for="animais">🐶 Animais</label>
+
+                <input type="radio" name="emojis" id="comida" value="🍕">
+                <label for="comida">🍕 Comidas</label>
+
+                <input type="radio" name="emojis" id="cores" value="🔴">
+                <label for="cores">🔴 Cores</label>
+            </div>
+        </div>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload()">REINICIAR</button>
+    </div>
+    <script src="./assets/scripts/script.js" defer></script>
+</body>
+
+</html>

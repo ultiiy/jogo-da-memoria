@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    user-select: none;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: rgb(173, 182, 192);
+    padding: 40px 60px;
+}
+
+#emojiForm {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #FFF;
+    border-radius: 45px;
+    padding: 0.4em 0.8em;
+}
+
+p {
+    margin-bottom: 0.3emwwwq;
+}
+
+h2 {
+    font-size: 3em;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 15px 20px;
+    width: 100%;
+    color: #000;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.reset:focus,
+.reset:hover {
+    color: white;
+    background-color: slategray;
+}
+
+.game {
+    width: 480px;
+    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.itens {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+
+.itens::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #404040;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.itens.open {
+    transform: rotateY(0deg);
+}
+
+.open::after,
+.match::after {
+    transform: rotateY(180deg);
+}
