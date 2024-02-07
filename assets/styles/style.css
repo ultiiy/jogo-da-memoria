@@ -1,3 +1,4 @@
+/* Estilos de reset e estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/* Estilos do corpo (body) */
 body {
     display: flex;
     justify-content: center;
@@ -15,6 +17,7 @@ body {
     user-select: none;
 }
 
+/* Estilos do contêiner (container) */
 .container {
     position: relative;
     display: flex;
@@ -26,32 +29,32 @@ body {
     padding: 40px 60px;
 }
 
+/* Estilos do formulário (form) */
 #emojiForm {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+/* Estilos de input */
 input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked+label {
+input[type="radio"]:checked + label {
     background-color: #FFF;
     border-radius: 45px;
     padding: 0.4em 0.8em;
 }
 
-p {
-    margin-bottom: 0.3emwwwq;
-}
-
+/* Estilos do cabeçalho (heading) */
 h2 {
     font-size: 3em;
     color: #FFF;
     text-transform: uppercase;
 }
 
+/* Estilos do botão (button) */
 button {
     padding: 15px 20px;
     width: 100%;
@@ -63,12 +66,12 @@ button {
     font-weight: 600;
 }
 
-.reset:focus,
-.reset:hover {
+.reset:focus, .reset:hover {
     color: white;
     background-color: slategray;
 }
 
+/* Estilos do contêiner do jogo (game) */
 .game {
     width: 480px;
     height: 480px;
@@ -81,6 +84,7 @@ button {
     perspective: 500px;
 }
 
+/* Estilos do item (itens) */
 .itens {
     position: relative;
     width: 100px;
@@ -99,8 +103,8 @@ button {
     position: absolute;
     inset: 0;
     background-color: #404040;
-    transition: 0.25s;
     transform: rotateY(0deg);
+    transition: 0.25s;
     backface-visibility: hidden;
 }
 
@@ -108,7 +112,6 @@ button {
     transform: rotateY(0deg);
 }
 
-.open::after,
-.match::after {
+.open::after, .match::after {
     transform: rotateY(180deg);
 }
